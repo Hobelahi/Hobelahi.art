@@ -1,0 +1,67 @@
+/* ======== فونت‌ها ======== */
+/* از CDN فونت Sahel استفاده می‌کنیم */
+@import url('https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css');
+@import url('https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel-Black.css');
+
+/* ======== رنگ‌ها ======== */
+:root {
+  --bg-color: #0d0d0d;       /* پس‌زمینه اصلی */
+  --text-color: #e0e0e0;     /* متن اصلی */
+  --accent-color: #a020f0;   /* بنفش نئونی */
+  --accent-glow: 0 0 8px #a020f0, 0 0 16px #a020f0; /* افکت نئون */
+  --muted-color: #888;       /* متن فرعی */
+}
+
+/* ======== استایل کلی ======== */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Sahel', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* ======== تیترها ======== */
+h1, h2, h3, h4, h5 {
+  font-family: 'Sahel Black', sans-serif;
+  color: var(--accent-color);
+  text-shadow: var(--accent-glow);
+}
+
+/* ======== لینک‌ها ======== */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+a:hover {
+  text-shadow: var(--accent-glow);
+}
+
+/* ======== ناوبری ======== */
+nav {
+  background-color: #111;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+nav a {
+  font-family: 'Sahel Black', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* ======== متن فرعی ======== */
+small, .muted {
+  color: var(--muted-color);
+}
+
+/* ======== فوتر ======== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: var(--muted-color);
+  border-top: 1px solid #222;
+}
