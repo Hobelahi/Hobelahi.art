@@ -51,6 +51,31 @@ nav a {
   font-family: 'Sahel Black', sans-serif;
   letter-spacing: 1px;
 }
+nav ul {
+  list-style: none;   /* حذف بولت‌های پیش‌فرض */
+  padding: 0;
+  margin: 0;
+  display: flex;      /* این خط باعث میشه آیتم‌ها افقی بشن */
+  justify-content: center; /* وسط چین کردن کل منو */
+  gap: 2rem;          /* فاصله بین آیتم‌ها */
+}
+
+nav ul li {
+  /* می‌تونی اینجا استایل‌های اضافی بدی */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--accent-color); /* رنگ لینک که تو پالت داری */
+  font-family: 'Sahel Black', sans-serif;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  text-shadow: var(--accent-glow);
+}
 
 /* ======== متن فرعی ======== */
 small, .muted {
