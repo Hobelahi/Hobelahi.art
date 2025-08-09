@@ -46,6 +46,7 @@ nav {
   display: flex;
   gap: 1rem;
   justify-content: center;
+  direction: rtl;
 }
 nav a {
   font-family: 'Sahel Black', sans-serif;
