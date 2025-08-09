@@ -1,51 +1,55 @@
-/* portfolio.css */
-
-/* گرید اصلی برای پورتفولیو */
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* سه ستون روی صفحه‌های بزرگ */
-  grid-gap: 16px;
+/* استایل اصلی کانتینر گالری */
+.portfolio-gallery {
+  column-count: 3;          /* سه ستون برای دسکتاپ */
+  column-gap: 1rem;         /* فاصله بین ستون‌ها */
   padding: 1rem;
+  max-width: 1200px;        /* محدود کردن عرض کل گالری */
+  margin: 0 auto;           /* وسط چین کردن */
 }
 
-/* آیتم‌های هر اثر */
-.portfolio-item {
-  background-color: #222;
+/* آیتم‌های گالری */
+.portfolio-gallery .item {
+  break-inside: avoid;      /* جلوگیری از شکستن آیتم بین ستون‌ها */
+  margin-bottom: 1rem;
+  background-color: #1a1a1a;
   border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 0 10px #a020f0aa; /* سایه‌ی بنفش نئونی */
-  transition: transform 0.3s ease;
+  padding: 0.5rem;
+  box-shadow: 0 0 8px rgba(160, 32, 240, 0.5);
 }
 
-/* افکت هاور بزرگ شدن */
-.portfolio-item:hover {
+/* تصویر داخل آیتم */
+.portfolio-gallery .item img {
+  width: 100%;              /* عرض کامل داخل ستون */
+  height: auto;             /* حفظ نسبت تصویر */
+  max-height: 350px;        /* حداکثر ارتفاع */
+  object-fit: cover;        /* برش طبیعی تصویر */
+  border-radius: 6px;
+  display: block;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.portfolio-gallery .item img:hover {
   transform: scale(1.05);
 }
 
-/* تصویر داخل هر آیتم */
-.portfolio-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-bottom: 2px solid var(--accent-color); /* خط بنفش زیر عکس */
-}
-
-/* توضیحات زیر هر تصویر */
-.portfolio-item .description {
-  padding: 0.5rem 1rem;
+/* توضیحات زیر تصویر */
+.portfolio-gallery .item p {
   color: var(--text-color);
-  font-family: 'Sahel', sans-serif;
   font-size: 0.9rem;
+  margin-top: 0.5rem;
+  text-align: right;
 }
 
-/* ریسپانسیو: دو ستون روی تبلت و موبایل */
-@media (max-width: 1024px) {
-  .portfolio-grid {
-    grid-template-columns: repeat(2, 1fr);
+/* ریسپانسیو برای تبلت - دو ستون */
+@media (max-width: 992px) {
+  .portfolio-gallery {
+    column-count: 2;
   }
 }
+
+/* ریسپانسیو برای موبایل - دو ستون */
 @media (max-width: 600px) {
-  .portfolio-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .portfolio-gallery {
+    column-count: 2;
   }
 }
