@@ -1,0 +1,51 @@
+/* portfolio.css */
+
+/* گرید اصلی برای پورتفولیو */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* سه ستون روی صفحه‌های بزرگ */
+  grid-gap: 16px;
+  padding: 1rem;
+}
+
+/* آیتم‌های هر اثر */
+.portfolio-item {
+  background-color: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px #a020f0aa; /* سایه‌ی بنفش نئونی */
+  transition: transform 0.3s ease;
+}
+
+/* افکت هاور بزرگ شدن */
+.portfolio-item:hover {
+  transform: scale(1.05);
+}
+
+/* تصویر داخل هر آیتم */
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 2px solid var(--accent-color); /* خط بنفش زیر عکس */
+}
+
+/* توضیحات زیر هر تصویر */
+.portfolio-item .description {
+  padding: 0.5rem 1rem;
+  color: var(--text-color);
+  font-family: 'Sahel', sans-serif;
+  font-size: 0.9rem;
+}
+
+/* ریسپانسیو: دو ستون روی تبلت و موبایل */
+@media (max-width: 1024px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
